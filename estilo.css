@@ -1,0 +1,204 @@
+/* codigo de Index */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    user-select:none;
+}
+
+
+
+
+header .logotipo {
+    width:120px;
+    padding: 20px;
+    
+}
+
+header nav{
+    display: inline-block;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 20px 135px;
+    font-size: 30px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition:.5s;
+}
+
+a:hover{
+    color: #ffffff
+}
+
+
+.iconos{
+    display: inline-block;
+    float: right;
+    padding:60px
+}
+
+.iconos i {
+    padding: 30px;
+    color: black;
+}
+
+.titulo {
+    display: block;
+    text-align: center;
+    padding: 200px;
+}
+
+.titulo h1 {
+    font-size:150px;
+}
+
+.titulo input {
+    padding: 10px 20px;
+    font-size: 30px;
+    border: none;
+    background-color: #CC1E10;
+    border-radius: 5px; 
+    color: white; 
+    cursor: pointer;
+}
+
+.titulo input:hover {
+    background-color: #B00000;}
+
+.titulo input:active {
+    background-color:#FF6666;
+}
+
+.cuerpo-index {
+    background-image: url(imagenes/background.jpeg);
+    background-size: 1920px 1080px;
+    background-attachment: fixed;
+    
+}
+
+footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background-color: rgb(255, 255, 255, 0.2);
+    opacity: 0.8;
+
+}
+
+
+
+/* Galeria Css */
+
+.body-galeria{
+    background-image: url(./imagenes/galeria/background.jpg);
+    background-attachment: fixed;
+}
+
+.galeria__container  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+    padding: 30px;
+}
+.galeria__container img{
+    width: 300px;
+    height: 200px;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+    border: solid 1px white;
+    }
+
+.galeria__container img:hover{
+    filter: opacity(0.9);
+    transform: scale(1.1);
+}    
+
+
+/* contacto css */
+
+
+
+.body-contacto{
+    background-image: url(./imagenes/contacto/AnoNuevoChinoFaroles.jpg);
+}
+
+.form__container{
+    width: 96%;
+    height:800px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    margin: 40px;
+    
+    
+}
+
+.form__logo{
+    width: 150px;
+    height: 150px;
+}
+
+.form__titulo{
+    color: #ffffff;
+}
+
+.informacion{
+    align-self: flex-start;
+    color: #ffffff;
+    padding-left: 70px;
+    align-items:center;
+    
+
+}
+
+.informacion__icons{
+    padding: 20px 60px;
+}
+
+.informacion__icons i{
+    margin: 20px;
+}
+
+.ubi{
+    margin: 40px;
+}
+
+
+.informacion__form{
+    align-self: flex-end;
+    width: 70%;
+    padding-right: 200px;
+    align-items: center;
+    
+
+}
+
+.form__imput{
+    margin: 10PX;
+}
+
+.mensaje{
+    color: #ffffff;
+}
+
+
+/* sobre nosotros codigo */
+
+
+.body-nosotros{
+    background-image: url(./imagenes/galeria/maintance.avif);
+    background-size:90vw;
+
+}
