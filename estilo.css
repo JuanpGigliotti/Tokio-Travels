@@ -9,52 +9,19 @@
     user-select:none;
 }
 
-
-
-
-header .logotipo {
-    width:120px;
-    padding: 20px;
-    
-}
-
-header nav{
-    display: inline-block;
-}
-
 header nav ul li {
     display: inline-block;
     padding: 20px 135px;
     font-size: 30px;
 }
 
-header nav ul li a {
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-    transition:.5s;
-}
-
-a:hover{
-    color: #ffffff
-}
-
-
-.iconos{
-    display: inline-block;
-    float: right;
-    padding:60px
-}
-
-.iconos i {
-    padding: 30px;
-    color: black;
-}
 
 .titulo {
-    display: block;
-    text-align: center;
-    padding: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 200px;
+    align-items: center;
 }
 
 .titulo h1 {
@@ -84,16 +51,73 @@ a:hover{
     background-attachment: fixed;
     
 }
-
-footer {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    text-align: center;
-    background-color: rgb(255, 255, 255, 0.2);
-    opacity: 0.8;
-
+.viaje__container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 300px;
 }
+.viaje__container-item{
+   background-color: rgba(160,160,160, 0.4);
+   padding:10px;
+   margin: 15px;
+   border-radius:5px;
+   width: 50%;
+   border: 1px solid black;
+}
+
+.item__parrafo{
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.item__titulo{
+    font-size: 90px;
+    color: #ffffff;
+    text-align: center;
+    
+}
+.item__imagen{
+    width: 100%;
+    display: block;
+}
+
+.derecha{
+   align-self: flex-end;
+   
+}
+
+.footer__container{
+    display: flex;
+    align-content: center;
+    flex-direction:column-reverse;
+    bottom: 8px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+    padding-top: 6px;
+    margin-top: 40px;
+}
+
+.footer__container-item{
+    padding: 5px;
+    color: rgba(199, 199, 199, 0.712);
+}
+
+.item__redes{
+    padding: 15px 10px 0 10px;
+    font-size: 25px;
+}
+
+@media (max-width: 800px){
+    .viaje__container-item{
+        width: 95%;
+        overflow: hidden;
+    }
+    .titulo{
+        text-align: center;
+    }
+
+    }
 
 
 
@@ -134,13 +158,15 @@ footer {
 
 .form__container{
     width: 96%;
-    height:800px;
-    background-color: black;
+    height:875px;
+    background-color: rgba(0, 0, 0, 0.699);
     display: flex;
     align-items: center;
     flex-direction: column;
     padding-top: 20px;
     margin: 40px;
+    border-radius: 5px;
+    border: 2px solid black;
     
     
 }
@@ -177,28 +203,201 @@ footer {
 
 
 .informacion__form{
-    align-self: flex-end;
-    width: 70%;
-    padding-right: 200px;
-    align-items: center;
-    
-
+    display: flex;
+    flex-direction: column;
+    width:60%;
 }
 
 .form__imput{
-    margin: 10PX;
+    margin: 10PX 0;  
 }
 
 .mensaje{
     color: #ffffff;
 }
 
+.form__enviar {
+    padding: 10px 20px;
+    font-size: 30px;
+    border: none;
+    background-color: #CC1E10;
+    border-radius: 5px; 
+    color: white; 
+    cursor: pointer;
+    align-self: center;
+    
+}
+
+.form__enviar:hover {
+    background-color: #B00000;}
+
+.form__enviar:active {
+    background-color:#FF6666;
+}
+
+
 
 /* sobre nosotros codigo */
 
 
 .body-nosotros{
-    background-image: url(./imagenes/galeria/maintance.avif);
-    background-size:90vw;
+    background-image: linear-gradient(135deg,
+    #666666, #8c8c8c, #a7a7a7, #bdbdbd, #c9c9c9, #d3d3d3, #dcdcdc);
+    background-size: 500%;
+    animation:colorcitos 8s infinite;
+}
+
+@keyframes colorcitos{
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;        
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+
+
+.pasion__container{
+    background-color: rgba(184, 184, 184, 0.685);
+    border-radius: 5px;
+    border:1px solid black;
+    
+    margin: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+}
+
+.container__titulo{
+    align-self: center;
+    color: #ffffff;
+    font-size: 80px;
+}
+
+.container__imagen{
+    object-fit: contain;
+    padding: 20px;
+    align-self: center;
+}
+
+.mision__container{
+    display: flex;
+    background-color: rgba(184, 184, 184, 0.685);
+    border-radius: 5px;
+    border:1px solid black;
+    flex-direction:row-reverse;
+    margin: 60px;
+    justify-content: space-around;
+    
+}
+    
+
+.mision__titulo{
+        color: #ffffff;
+        font-size: 80px;
+        align-self: center;
+        padding-right: 50px;
+    }
+
+.mision__parrafo{
+    align-self: center;
+    font-size: 30px;
+    padding-left: 35px;
+    padding-right: 35px;
+    color: #ffffff;
+}
+
+.mision__ceo__firma{
+    display: flex;
+    background-color: rgba(184, 184, 184, 0.685);
+    border-radius: 5px;
+    border:1px solid black;
+    flex-direction:row;
+    margin: 60px;
+    justify-content: space-around;
+    
+}
+
+.mision__ceo{
+    padding: 20px;
+}
+
+.mision__ceo__texto{
+    align-self: center;
+    font-size: 50px;
+    padding-right: 40px;
+    color: #ffffff;
+}
+
+.historia__container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(184, 184, 184, 0.685);
+    border-radius: 5px;
+    border:1px solid black;
+    margin: 60px;
+}
+
+.historia__titulo{
+    align-self: center;
+    font-size: 80px;
+    color: #ffffff;
+
+}
+
+.historia__texto{
+    align-self: center;
+    font-size: 35px;
+    color: #ffffff;
+}
+
+.historia__video{
+    align-self: center;
+    padding: 20px;
+}
+
+.frase__texto{
+    color: #ffffff;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1000px){
+    .pasion__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .mision__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+    .mision__ceo__firma{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+    .historia__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+    .frase__texto{
+        display: flex;
+        font-size: 40px;
+        justify-content: center;
+    }
 
 }

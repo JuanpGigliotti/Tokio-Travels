@@ -10,27 +10,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <meta name="keywords" content="Viajes a Japón, Paquetes turísticos a Japón, Turismo en Tokio, Viajes a Kyoto, Experiencias culturales en Japón, Tours por Japón, Agencia de viajes a Japón, Destinos japoneses, Aventuras en Japón, Descubriendo Japón con Japan Travels">
+    <meta name="description" content="Descubre la magia de Japón con nuestros paquetes de viaje a medida. Explora Tokio, Kyoto y mucho más. Experimenta la cultura, la gastronomía y la belleza de Japón con nosotros. ¡Reserva tu aventura japonesa hoy mismo!">
 </head>
+
 <body class="cuerpo-index">
-    <section class="header">
-        <header class="header-responsive">
-            <img class="logotipo" src="imagenes/logo1.png" alt="Japan Tours">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pages/nosotros.html">About Us</a></li>
-                    <li><a href="pages/contacto.html">Contact</a></li>
-                    <li><a href="pages/galeria.html">Gallery</a></li>
+
+<section class="barra-navegacion">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="./index.html"><img src="./imagenes/logo1.png" alt="Bootstrap" width="80" height="80"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/nosotros.html">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/contacto.html">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/galeria.html">galeria</a>
+                  </li>
                 </ul>
-            </nav>
-            <div class="iconos">
-                <a href="https://www.facebook.com/JapanTourESP" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://twitter.com/JapanTravel" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.instagram.com/japantravelcom/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              </div>
             </div>
-        </header>
-    </section>
-    
+          </nav>
+    </header>
+</section>
+
+
+
+
     <section class="body">
         <main>
             <div class="titulo">
@@ -39,13 +58,92 @@
             </div>
         </main>
     </section>
+
+    <section class="viaje">
+        <div class="viaje__container">
+            <div class="viaje__container-item" data-aos="fade-down-right">
+                <h2 class="item__titulo">Tokio</h2>
+                <p class="item__parrafo">Ubicada en la región de Kantō, es el centro de la actividad comercial, política, cultural y culinaria de todo el país. Entre los destinos que visitar, por tanto, quizá es el más caro de todos. Desde su fundación en 1457, a los pies del Monte Fuji, 
+                   ha visto dinastías alzarse e imperios caer. Como una de las metrópolis más fuertes del mundo, tiene la capacidad de recibir a diversas gamas de turismo: hay Tokio para todos.</p>
+                <img class="item__imagen" src="./imagenes/index/tokio.jpg">
+            </div>
+            <div class="viaje__container-item derecha" data-aos="fade-down-left">
+                <h3 class="item__titulo">Kioto</h3>
+                <p class="item__parrafo">Entre las atracciones turísticas más representativas está, sin duda, el Palacio Imperial. Sin embargo, la ciudad también cuenta con santuarios milenarios y castillos que han resistido el paso del tiempo, como si se mantuvieran todavía en funciones. 
+                    De la misma manera, se recomienda visitar la serie de arcos torii —umbrales ceremoniales sintoístas— enfilados en el centro de Kioto.</p>
+                <img class="item__imagen" src="./imagenes/index/kioto.jpg">
+            </div>
+            <div class="viaje__container-item" data-aos="fade-down-right">
+            <h3 class="item__titulo">Jigokudani</h3>
+            <p class="item__parrafo">es posible seguir la antigua tradición japonesa del ashiyu: una práctica meditativa de inmersión a la naturaleza en la que la persona mete los pies a las aguas calientes del río en movimiento. 
+                Esta experiencia es completamente gratuita, ya que conserva un halo sagrado en la tradición oral de la región.</p>
+                <img class="item__imagen" src="./imagenes/index/jokoudani.jpg">
+            </div>
+            <div class="viaje__container-item derecha" data-aos="fade-down-left">
+                <h4 class="item__titulo">Sapporo</h4>
+                <p class="item__parrafo">Durante una semana entera del mes de febrero, escultores profesionales de todo el mundo emprenden sus proyectos monumentales sobre hielo. Por esto, es común ver réplicas de templos, personajes de manga y otras representaciones hechas solamente de nieve. Esta tradición se inauguró en la década de los 50, 
+                    pero se mantiene hasta la actualidad con nuevas adaptaciones tecnológicas, que hacen que los visitantes tengan una experiencia de inmersión más profunda.</p>
+                <img class="item__imagen" src="./imagenes/index/saporo.jpg">
+            </div>
+
+            <div class="viaje__container-item" data-aos="fade-down-right">
+                <h4 class="item__titulo">Yokohama</h4>
+                <p class="item__parrafo">Yokohama es la ciudad vecina de Tokio más visitada por el turismo internacional. Como está a las orillas del mar, los visitantes pasan el día junto a la playa. 
+                    Sin embargo, el destino es famoso por el Museo del Ramen y sus parques de diversiones, así como los centros empresariales que la han hecho crecer.</p>
+                <img class="item__imagen" src="./imagenes/index/yokohama.jpg">
+            </div>
+
+            <div class="viaje__container-item derecha" data-aos="fade-down-left">
+                <h4 class="item__titulo">Nagano</h4>
+                <p class="item__parrafo">La zona es reconocida internacionalmente, además, por sus asentamientos dedicados a la terapia de aguas termales. La concentración de templos budistas en Nagano supera a muchas otras regiones del país. 
+                    Es común que se reciban turistas en otoño, ya que el paisaje se enciende en tonalidades ocre con la caída de las hojas durante la temporada.</p>
+                <img class="item__imagen" src="./imagenes/index/nagano.jpg">
+            </div>
+
+            <div class="viaje__container-item" data-aos="fade-down-right">
+                <h4 class="item__titulo">Osaka</h4>
+                <p class="item__parrafo">Osaka es una ciudad dedicada al entretenimiento. La inmensa cantidad de comercios ofrece algo que ver en cada esquina, una detrás de la otra. 
+                    Además, es considerada la capital culinaria de todo el país, justo detrás de los restaurantes de gran turismo establecidos en Tokio.</p>
+                <img class="item__imagen" src="./imagenes/index/osaka.jpg">
+            </div>
+            <div class="viaje__container-item derecha" data-aos="fade-down-left">
+                <h4 class="item__titulo">Aoshima</h4>
+                <p class="item__parrafo" >Originalmente, Aoshima era un pueblo pesquero. A mediados del siglo XX, una plaga importante de roedores azotó la isla. Por esta razón, se introdujeron algunos felinos domésticos para ayudar a los seres humanos a terminar con las ratas. 
+                    Los pobladores nunca se imaginaron que, un par de años más tarde, estos animales se reproducirían exponencialmente hasta apropiarse del lugar.</p>
+                <img class="item__imagen" src="./imagenes/index/aoshima.jpg"> 
+            </div>
+        </div>
+    </section>
     
     <section>   
-        <footer>
-            <h3>
+        <footer class="footer__container">
+            <h4 class="footer__container-item">
                &copy;Tokyo Travel
-            </h3>
+            </h4>
+            <div class="footer__container-item">
+                <a class="item__redes" href="https://www.facebook.com/JapanTourESP" target="_blank"><i class="fa-brands fa-facebook-f fa-xl" style="color: #ffffff;"></i></a>
+                <a class="item__redes" href="https://twitter.com/JapanTravel" target="_blank"><i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i></a>
+                <a class="item__redes" href="https://www.instagram.com/japantravelcom/" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i></a>
+            </div>
         </footer>        
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+<script>
+    AOS.init();
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
