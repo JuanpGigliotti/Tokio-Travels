@@ -8,21 +8,131 @@
           user-select: none;
 }
 
-li {
-  padding: 20px 135px;
-  font-size: 30px;
+p {
+  font-family: "Merriweather", serif;
 }
 
+h1, h2 {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.header_index {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.4rem 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.header_index::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  z-index: -1;
+}
+.header_index::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: 0.5s;
+}
+.header_index:hover::after {
+  left: 100%;
+}
+
+.logo_index {
+  width: 100px;
+}
+
+.navbar_index a {
+  font-size: 2.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 2.5rem;
+  margin-left: 70px;
+}
+
+#check {
+  display: none;
+}
+
+.icons_index {
+  position: absolute;
+  right: 5%;
+  font-size: 2.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .icons_index {
+    display: inline-flex;
+  }
+  #check:checked ~ .icons_index #menu-icon {
+    display: none;
+  }
+  .icons_index #close-icon {
+    display: none;
+  }
+  #check:checked ~ .icons_index #close-icon {
+    display: block;
+  }
+  .navbar_index {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(50px);
+            backdrop-filter: blur(50px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.3s ease;
+  }
+  #check:checked ~ .navbar_index {
+    height: 17.7rem;
+  }
+  .navbar_index a {
+    display: block;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+  #check:checked ~ .navbar_index a {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(0.15s * var(--i));
+  }
+}
 .titulo {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-top: 200px;
+  padding-top: 150px;
   align-items: center;
   color: #fff;
 }
 .titulo h1 {
-  font-size: 150px;
+  font-size: 200px;
   -webkit-text-stroke: 2px #000;
   text-stroke: 2px #000;
 }
@@ -34,6 +144,7 @@ li {
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
+  margin-bottom: 200px;
 }
 .titulo input:hover {
   background-color: #B00000;
@@ -42,40 +153,87 @@ li {
   background-color: #FF6666;
 }
 
+.titulo__2 {
+  display: flex;
+  justify-content: center;
+  background: #000;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+.titulo__2 .titulo__2-item {
+  align-self: center;
+  color: #fff;
+  font-size: 80px;
+  padding: 15px;
+}
+
 .cuerpo-index {
   background-image: url(../imagenes/background.jpeg);
   background-size: 100%;
   background-attachment: fixed;
 }
 
-.viaje__container {
+.viaje {
+  overflow: hidden;
+}
+.viaje .card_index:nth-child(2n) {
+  float: right;
+}
+.viaje .card_index {
+  width: 60%;
+  height: 550px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #fff;
+  position: relative;
+  margin: 30px;
+}
+.viaje .card_index:hover .card__body {
+  right: 0;
+}
+.viaje .card_index .card__imagen {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+.viaje .card_index .card__body {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: rgba(28, 53, 59, 0.3294117647);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 15px;
+  color: #fff;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  margin-top: 300px;
+  justify-content: center;
+  transition: 1.8s;
 }
-.viaje__container .viaje__container-item {
-  background-color: rgba(160, 160, 160, 0.4);
-  padding: 10px;
-  margin: 15px;
-  border-radius: 5px;
-  width: 50%;
-  border: 1px solid black;
+.viaje .card_index .card__titulo {
+  text-transform: uppercase;
+  font-size: 100px;
+  font-weight: 500;
 }
-.viaje__container .item__parrafo {
-  color: #fff;
+.viaje .card_index .card__subtitulo {
+  font-size: 80px;
+  font-weight: 500;
+}
+.viaje .card_index .card__parrafo {
   font-size: 25px;
-}
-.viaje__container .item__titulo {
-  font-size: 90px;
-  color: #fff;
-  text-align: center;
-}
-.viaje__container .item__imagen {
-  width: 100%;
-  display: block;
-}
-.viaje__container .derecha {
-  align-self: flex-end;
+  line-height: 25px;
+  margin: 40px 0;
+  font-weight: 400;
 }
 
 .footer__container {
@@ -98,10 +256,31 @@ li {
   font-size: 25px;
 }
 
-@media (max-width: 800px) {
-  .viaje__container-item {
-    width: 95%;
-    overflow: hidden;
+@media (max-width: 880px) {
+  .titulo h1 {
+    font-size: 150px;
+  }
+  .cuerpo-index {
+    background-attachment: fixed;
+    background-size: 100%;
+  }
+  .viaje {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .viaje .card_index {
+    width: 90%;
+  }
+  .viaje .card_index .card__titulo {
+    font-size: 50px;
+  }
+  .viaje .card_index .card__parrafo {
+    font-size: 15px;
+  }
+  .cuerpo-index {
+    background-attachment: fixed;
   }
   .titulo {
     text-align: center;
@@ -135,7 +314,7 @@ li {
 }
 
 .form__container {
-  width: 96%;
+  width: 90%;
   height: 875px;
   background-color: rgba(0, 0, 0, 0.699);
   display: flex;
@@ -145,6 +324,7 @@ li {
   margin: 40px;
   border-radius: 5px;
   border: 2px solid #000;
+  overflow: hidden;
 }
 .form__container .form__logo {
   width: 150px;
@@ -156,8 +336,9 @@ li {
 .form__container .informacion {
   align-self: flex-start;
   color: #fff;
-  padding-left: 70px;
   align-items: center;
+  margin-left: 40px;
+  overflow: hidden;
 }
 .form__container .informacion__iconos {
   padding: 20px 60px;
@@ -199,9 +380,13 @@ li {
 }
 
 .body-nosotros {
-  background-image: linear-gradient(135deg, #666666, #8c8c8c, #a7a7a7, #bdbdbd, #c9c9c9, #d3d3d3, #dcdcdc);
-  background-size: 500%;
-  animation: colorcitos 8s infinite;
+  /*
+  background-image: linear-gradient(135deg,
+  #e61919, #f15120, #f57600, #ffb01d, #ebcb3e,);
+  animation:colorcitos 20s infinite;
+  */
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(../imagenes/nosotros/bodynosotros.jpg);
 }
 
 @keyframes colorcitos {
@@ -216,11 +401,14 @@ li {
   }
 }
 .pasion__container {
-  background-color: rgba(160, 160, 160, 0.4);
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
   border-radius: 5px;
-  border: 1px solid #000;
-  margin: 60px;
+  border: 1px solid #fff;
+  margin: 2em 0;
   display: flex;
+  width: 100%;
   flex-direction: row;
   justify-content: space-around;
 }
@@ -229,51 +417,66 @@ li {
   color: #fff;
   font-size: 80px;
 }
-.pasion__container container__imagen {
+.pasion__container .container__imagen {
   -o-object-fit: contain;
      object-fit: contain;
-  padding: 20px;
+  margin: 20px;
   align-self: center;
+  border-radius: 5px;
+  border: 1px solid #fff;
 }
 
 .mision__container {
   display: flex;
-  background-color: rgba(160, 160, 160, 0.4);
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
   border-radius: 5px;
-  border: 1px solid #000;
+  border: 1px solid #fff;
   flex-direction: row-reverse;
-  margin: 60px;
+  width: 80%;
+  margin: 1.5em 2em;
   justify-content: space-around;
 }
 .mision__container .mision__titulo {
   color: #fff;
-  font-size: 80px;
+  font-size: 90px;
   align-self: center;
-  padding-right: 50px;
+  padding: 0.5em 0.5em;
+  text-align: center;
 }
 .mision__container .mision__parrafo {
   align-self: center;
-  font-size: 30px;
-  padding-left: 35px;
-  padding-right: 35px;
+  line-height: 1.5;
+  font-size: 1.5em;
+  padding: 30px;
   color: #fff;
 }
 
 .mision__ceo__firma {
   display: flex;
-  background-color: rgba(160, 160, 160, 0.4);
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
   border-radius: 5px;
-  border: 1px solid #000;
+  border: 1px solid #fff;
   flex-direction: row;
-  margin: 60px;
+  margin-left: 10%;
+  width: 88%;
   justify-content: space-around;
+  overflow: hidden;
 }
 .mision__ceo__firma .mision__ceo {
+  margin: 1em;
   padding: 20px;
+  width: 35%;
+  height: 70%;
+  width: 100%;
 }
 .mision__ceo__firma .mision__ceo__texto {
   align-self: center;
-  font-size: 50px;
+  text-align: center;
+  font-size: 45px;
   padding-right: 40px;
   color: #fff;
 }
@@ -281,61 +484,98 @@ li {
 .historia__container {
   display: flex;
   flex-direction: column;
-  background-color: rgba(160, 160, 160, 0.4);
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
   border-radius: 5px;
-  border: 1px solid #000;
-  margin: 60px;
+  border: 1px solid #fff;
+  margin-top: 2em;
 }
 .historia__container .historia__titulo {
   align-self: center;
-  font-size: 80px;
+  font-size: 5em;
+  padding-top: 0.5em;
   color: #fff;
 }
 .historia__container .historia__texto {
   align-self: center;
-  font-size: 35px;
+  font-size: 1.5em;
+  line-height: 1.5;
+  padding: 1.3em 2.5em;
   color: #fff;
 }
 .historia__container .historia__video {
   align-self: center;
   padding: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
-.frase__texto {
-  color: #fff;
-  font-size: 70px;
+.frase {
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+.frase .frase__texto {
+  margin: 0.8em;
+  text-align: center;
+  color: #ffffff;
+  font-size: 60px;
   display: flex;
   justify-content: center;
+  padding: 0.8em;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .pasion__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
+    overflow: hidden;
+  }
+  .pasion__container .container__titulo {
+    font-size: 60px;
+  }
+  .pasion__container .container__imagen {
+    margin: 0;
+    width: 100%;
   }
   .mision__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  .mision__container .mision__parrafo {
+    font-size: 20px;
   }
   .mision__ceo__firma {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
+    margin-top: 15px;
+    width: 100%;
+    margin: 15px 0 0 0;
+    overflow: hidden;
   }
   .historia__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
+    overflow: hidden;
+  }
+  .historia__container .historia__texto {
+    font-size: 20px;
+  }
+  .historia__container .historia__video {
+    width: 100%;
   }
   .frase__texto {
     display: flex;
-    font-size: 40px;
+    font-size: 20px;
     justify-content: center;
+    overflow: hidden;
   }
 }/*# sourceMappingURL=style.css.map */
